@@ -10,6 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class ClienteDao {
+    //Cliente 
 
     public Cliente getCliente(String ci)
     {
