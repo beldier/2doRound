@@ -2,8 +2,8 @@
 package Controlador;
 
 import static Controlador.Conector.getConnection;
-import Modelo.Trabajador;
-import Modelo.Dao.TrabajadorDao;
+import Modelo.Empleado;
+import Modelo.Dao.EmpleadoDao;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
