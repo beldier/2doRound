@@ -177,14 +177,25 @@ public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVist
         jRegistroVacacion.addActionListener(c);
         jCronogramaMantenimiento.addActionListener(c);
         jUbicacionCustodiaBienes.addActionListener(c);
+        jRegistroPersonal.addActionListener(c);
     }
 
     @Override
     public void init() {
-        System.out.println("123456");
+
         initComponents();
         
         jSalida.setActionCommand(ABRIREGISTROSALIDA);
+        jComputadorasMantenimiento.setActionCommand(ABRIRCOMPUTADORASMANTENIMIENTO);
+        jIngreso.setActionCommand(ABRIREGISTROINGRESO);
+        jHabilitadosInstancia.setActionCommand(ABRIRHABILITADOSISTANCIA);
+        jMaterialesConsumibles.setActionCommand(ABRIRMATERIALESCONSUMIBLES);
+        jProductosSinUsar.setActionCommand(ABRIRPRODUCTOSSINUSAR);
+        jRegistroComedor.setActionCommand(ABRIREGISTROCOMEDOR);
+        jRegistroVacacion.setActionCommand(ABRIREGISTROVACACION);
+        jCronogramaMantenimiento.setActionCommand(ABRIRCRONOGRAMAMANTENIMIENTO);
+        jUbicacionCustodiaBienes.setActionCommand(ABRIRUBICACIONCUSTODIABIENES);
+        jRegistroPersonal.setActionCommand(ABRIREGISTROPERSONAL);
         
         setVisible(true);
         setLocationRelativeTo(null);

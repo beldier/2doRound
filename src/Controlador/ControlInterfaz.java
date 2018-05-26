@@ -33,6 +33,7 @@ public class ControlInterfaz implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String orden=e.getActionCommand();
+        System.out.println(orden);
         switch(orden){
             ////////////////////////////SOLO PARA ABRIR VENTANAS 
             case "Abrir registro ingreso":break;
