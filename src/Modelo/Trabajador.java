@@ -1,7 +1,7 @@
 
 package Modelo;
 
-public class Cliente {
+public class Trabajador {
     private String ci;
     private String nombre;
     private String apellido;

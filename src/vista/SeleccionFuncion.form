@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jRegistroPersonal" max="32767" attributes="0"/>
+                  <Component id="jSalida" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jIngreso" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jHabilitadosInstancia" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jRegistroComedor" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jCronogramaMantenimiento" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jUbicacionCustodiaBienes" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jMaterialesConsumibles" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jProductosSinUsar" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jComputadorasMantenimiento" alignment="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jRegistroVacacion" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="55" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="3" max="-2" attributes="0"/>
+                      <Component id="jUbicacionCustodiaBienes" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jMaterialesConsumibles" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jProductosSinUsar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jComputadorasMantenimiento" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jRegistroVacacion" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jIngreso" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jSalida" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jRegistroPersonal" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jHabilitadosInstancia" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jRegistroComedor" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jCronogramaMantenimiento" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="jIngreso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ingreso"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jIngresoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jSalida">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salida"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jRegistroComedor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registro Comedor"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jHabilitadosInstancia">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Habilitados instancia"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jHabilitadosInstanciaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jRegistroPersonal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registro Personal"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRegistroPersonalActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jCronogramaMantenimiento">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cronograma Mantenimiento"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jRegistroVacacion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registro Vacacion"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jComputadorasMantenimiento">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Computadoras Mantenimieto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jProductosSinUsar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Productos sin usar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jUbicacionCustodiaBienes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ubicacion Custodia Bienes"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jMaterialesConsumibles">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Materiales Consumibles"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

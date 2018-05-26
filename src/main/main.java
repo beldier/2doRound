@@ -3,12 +3,12 @@ package main;
 
 import Controlador.Conector;
 import Controlador.ControlInterfaz;
-import vista.Ventanta;
+import vista.SeleccionFuncion;
 public class main {
     public static void main(String args[])
     {
-        Ventanta v=new Ventanta();
-        ControlInterfaz c=new ControlInterfaz(v);
-        v.setControlador(c);      
+        SeleccionFuncion s=new SeleccionFuncion();
+        ControlInterfaz c=new ControlInterfaz(s);
+        s.setControlador(c);      
     }
 }
