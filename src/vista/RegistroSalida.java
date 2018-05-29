@@ -6,6 +6,7 @@
 package vista;
 
 import Controlador.ControlInterfaz;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -109,5 +110,34 @@ public class RegistroSalida extends javax.swing.JFrame implements InterfazVista{
         jSalir.setActionCommand(SALETRABAJADOR);
         jLimpiar.setActionCommand(LIMPIARSALIDA);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+       public int alerta()
+    {
+        Object[] options = {"Si, porfavor",
+                    "Creo que lo pensare"};
+        int ans = JOptionPane.showOptionDialog(this,"Saliendo antes de hora \n Estas segur@?","Alerta",
+                                            JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
+                                            null,options,options[0]);
+        return ans;
+    }
+    public void limpiar()
+    {
+        jCodigo.setText("");
+    }
+    public void exito()
+    {
+        JOptionPane.showMessageDialog(this,"Salida registra\nHasta luego.","Mensaje",JOptionPane.OK_OPTION);
+    }
+    public int getCi()
+    {
+        return Integer.parseInt(jCodigo.getText().trim());
+    }
+    public void errorSalidaPrevia()
+    {
+           JOptionPane.showMessageDialog(this,"Ese ci ya fue registrado","Mensaje",JOptionPane.ERROR_MESSAGE);
+    }
+    public void ciInexistente()
+    {
+           JOptionPane.showMessageDialog(this,"No existe este ci","Mensaje",JOptionPane.ERROR_MESSAGE);
     }
 }

@@ -12,6 +12,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
 import vista.ConsultaEmpleado;
@@ -72,12 +75,39 @@ public class ControlInterfaz implements ActionListener {
     }
     public void salidaTrabajador()
     {
-            System.out.println("salida");
+        int ci=registroSalida.getCi();
+        Empleado e=new EmpleadoDao().getEmpleado(ci);
+        if(e==null)
+            registroSalida.ciInexistente();
+        else{
+            boolean salioAntes=ControlEmpleado.verificarSalidaPrevia(ci);
+            if(salioAntes==false){
+                SimpleDateFormat df = new SimpleDateFormat("YYYY/MM/dd hh:mm:ss");
+                Calendar calendar = Calendar.getInstance();
+                Date horaActual=calendar.getTime();
+                String hora=(df.format(horaActual));
+                if(ControlHora.saleAntes(horaActual)){
+                    int ans=registroSalida.alerta();//si=0 ,no=1
+                    if(ans==0){
+                        new EmpleadoDao().marcarSalida(registroSalida.getCi(),hora);
+                        registroSalida.exito();
+                    }
+                }
+                else{
+                    new EmpleadoDao().marcarSalida(registroSalida.getCi(),hora);
+                    registroSalida.exito();
+                }
+            }   
+            else{
+                registroSalida.errorSalidaPrevia();
+            }
+        }
+        limpiarRegistro();
    
     }
     public void limpiarRegistro()
     {
-             System.out.println("limpiar");
+         registroSalida.limpiar();
     }
 
     private void abrirIngresoSalida() {
