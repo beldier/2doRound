@@ -18,7 +18,7 @@ public class EmpleadoDao {
     public Empleado getEmpleado(int ci)
     {
         Connection conn=getConnection();
-        String query="select nombre from empleado where ciEmpleado="+ci;
+        String query="select nombre,fecha_contratacion,diasTomados from empleado where ciEmpleado="+ci;
         Empleado c=null;
         try {
             Statement stat = conn.createStatement();
@@ -26,6 +26,8 @@ public class EmpleadoDao {
             if(rs.next()){
                 c=new Empleado();
                 c.setNombre(rs.getString("nombre"));
+                c.setFechaContratacion(rs.getString("fecha_contratacion"));
+                c.setDiasTomados(Integer.parseInt(rs.getString("diasTomados")));
             }            
         }catch (SQLException e) {
              System.out.println(e.getMessage());
@@ -65,5 +67,18 @@ public class EmpleadoDao {
              System.out.println(e.getMessage());
         }   
         return c;
+    }
+    public void agregarVacacion(int ci,int dias)
+    {
+        Connection c=getConnection();
+        String query="update empleado set diasTomados=diasTomados+"+dias+" where ciempleado="+ci;
+        System.out.println(query);
+        try {
+            PreparedStatement pstmt;
+            pstmt = c.prepareStatement(query);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+                e.printStackTrace();
+        }
     }
 }

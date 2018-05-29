@@ -1,4 +1,4 @@
-
+    
 package Modelo;
 
 public class Empleado {
@@ -8,7 +8,25 @@ public class Empleado {
     private String fecha_nac;
     private String genero;
     private int edad;
+    private int diasTomados;
+    private String fechaContratacion;
 
+    public String getFechaContratacion() {
+        return fechaContratacion;
+    }
+
+    public void setFechaContratacion(String fechaContratacion) {
+        this.fechaContratacion = fechaContratacion;
+    }
+
+    public int getDiasTomados() {
+        return diasTomados;
+    }
+
+    public void setDiasTomados(int diasTomados) {
+        this.diasTomados = diasTomados;
+    }
+    
 
 
 

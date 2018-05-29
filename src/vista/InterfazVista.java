@@ -31,5 +31,8 @@ public interface InterfazVista {
     static final String ACEPTASALIDA="Acepta registro salida";
     static final String CANCELASALIDA="Acepta registro salida almacen";
     static final String CONSULTAEMPLEADO="Realiza consulta empleado vigente";
+    static final String BUSCARDIASVACACION="Buscar dias vacacion";
+    static final String OTORGARVACACION="Otorgar vacacion";
+    static final String SALIRVENTANAVACACION="Salir ventana vacacion";
     
 }
