@@ -14,7 +14,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import javax.swing.JOptionPane;
+import vista.ConsultaEmpleado;
+import vista.IngresoAlmacen;
+import vista.PantallaIngresoSalida;
 import vista.RegistroSalida;
+import vista.SalidaAlmacen;
 import vista.SeleccionFuncion;
 
 
@@ -24,6 +28,10 @@ public class ControlInterfaz implements ActionListener {
     private SeleccionFuncion seleccionFuncion;
     private Conector c;
     private RegistroSalida registroSalida;
+    private PantallaIngresoSalida ingresoSalida;
+    private ConsultaEmpleado consultaEmpleado;
+    private IngresoAlmacen ingresoAlmacen;
+    private SalidaAlmacen salidaAlmacen;
     public ControlInterfaz(SeleccionFuncion s)
     {
         this.seleccionFuncion=s;
@@ -38,15 +46,17 @@ public class ControlInterfaz implements ActionListener {
             ////////////////////////////SOLO PARA ABRIR VENTANAS 
             case "Abrir registro ingreso":break;
             case "Abrir registro salida":abrirRegistroSalida();break;
-            case "Abrir registro personal":break;
+            case "Abrir registro personal":abrirConsultaEmpleado();break;
             case "Abrir habilitados instancia":break;
             case "Abrir registro comedor":break;
             case "Abrir cronograma mantenimiento":break;
             case "Abrir ubicacion custodia bienes":break;
-            case "Abrir materiales consumibles":break;
+            case "Abrir materiales consumibles":abrirIngresoSalida();break;
             case "Abrir productos sin usar":break;
             case "Abrir computadoras mantenimiento":break;
             case "Abrir registro vacacion":break;
+            case "Abrir registro ingreso almacen":abrirIngresoAlmacen();break;
+            case "Abrir registro salida almacen":abrirSalidaAlmacen();break;
             ///////////////////////////////
             
             case "Sale trabajador":salidaTrabajador();break;
@@ -58,6 +68,7 @@ public class ControlInterfaz implements ActionListener {
     {   
         registroSalida=new RegistroSalida();
         registroSalida.setControlador(this);
+        
     }
     public void salidaTrabajador()
     {
@@ -67,6 +78,26 @@ public class ControlInterfaz implements ActionListener {
     public void limpiarRegistro()
     {
              System.out.println("limpiar");
+    }
+
+    private void abrirIngresoSalida() {
+        ingresoSalida=new PantallaIngresoSalida();
+        ingresoSalida.setControlador(this);
+    }
+
+    private void abrirConsultaEmpleado() {
+        consultaEmpleado=new ConsultaEmpleado();
+        consultaEmpleado.setControlador(this);
+    }
+
+    private void abrirIngresoAlmacen() {
+        ingresoAlmacen=new IngresoAlmacen();
+        ingresoAlmacen.setControlador(this);
+    }
+
+    private void abrirSalidaAlmacen() {
+        salidaAlmacen=new SalidaAlmacen();
+        salidaAlmacen.setControlador(this);
     }
 
 }

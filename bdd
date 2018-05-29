@@ -1,0 +1,64 @@
+
+ALTER TABLE Empleado DROP CONSTRAINT Area_Empleado;
+
+ALTER TABLE Materia DROP CONSTRAINT Docente_Materia;
+
+ALTER TABLE Docente DROP CONSTRAINT Empleado_Docente;
+
+ALTER TABLE Registro_Salida DROP CONSTRAINT Empleado_Registro_Salida;
+
+ALTER TABLE Registro_Entrada DROP CONSTRAINT Empleado_Registro_Entrada;
+
+ALTER TABLE Estudiante DROP CONSTRAINT Materia_Estudiante;
+
+ALTER TABLE Ingreso DROP CONSTRAINT Proveedor_Ingreso;
+
+ALTER TABLE Ingreso DROP CONSTRAINT Material_Ingreso;
+
+ALTER TABLE Salida DROP CONSTRAINT Empleado_Salida;
+
+ALTER TABLE Salida DROP CONSTRAINT Material_Salida;
+
+ALTER TABLE Estudiante DROP CONSTRAINT PK_Estudiante;
+
+DROP TABLE Estudiante;
+
+ALTER TABLE Materia DROP CONSTRAINT PK_Materia;
+
+DROP TABLE Materia;
+
+ALTER TABLE Salida DROP CONSTRAINT PK_Salida;
+
+DROP TABLE Salida;
+
+ALTER TABLE Ingreso DROP CONSTRAINT PK_Ingreso;
+
+DROP TABLE Ingreso;
+
+ALTER TABLE Registro_Entrada DROP CONSTRAINT PK_Registro_Entrada;
+
+DROP TABLE Registro_Entrada;
+
+ALTER TABLE Registro_Salida DROP CONSTRAINT PK_Registro_Salida;
+
+DROP TABLE Registro_Salida;
+
+ALTER TABLE Docente DROP CONSTRAINT PK_Docente;
+
+DROP TABLE Docente;
+
+ALTER TABLE Empleado DROP CONSTRAINT PK_Empleado;
+
+DROP TABLE Empleado;
+
+ALTER TABLE Proveedor DROP CONSTRAINT PK_Proveedor;
+
+DROP TABLE Proveedor;
+
+ALTER TABLE Material DROP CONSTRAINT PK_Material;
+
+DROP TABLE Material;
+
+ALTER TABLE Area DROP CONSTRAINT PK_Area;
+
+DROP TABLE Area;

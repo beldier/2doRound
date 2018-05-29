@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/lurianne/Documents/Proyectos/Test/src/Modelo/Dao/TrabajadorDao.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/src/Modelo/Dao/EmpleadoDao.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/test/TestRegistroPersonal.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/src/vista/SeleccionFuncion.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/test/TestMaterial.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/src/vista/SalidaAlmacen.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/src/Modelo/Dao/MaterialDao.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/src/Controlador/ControlInterfaz.java</file>
+            <file>file:/C:/Users/user/Desktop/2doRound/src/Modelo/Dao/ProveedorDao.java</file>
         </group>
     </open-files>
 </project-private>

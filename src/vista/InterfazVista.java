@@ -20,9 +20,16 @@ public interface InterfazVista {
     static final String ABRIREGISTROVACACION="Abrir registro vacacion";
     static final String ABRIRCRONOGRAMAMANTENIMIENTO="Abrir cronograma mantenimiento";
     static final String ABRIRPRODUCTOSSINUSAR="Abrir productos sin usar";
+    static final String ABRIRREGISTROSINGRESO="Abrir registro ingreso almacen";
+    static final String ABRIRREGISTROSSALIDA="Abrir registro salida almacen";
     ////////////////////////////////////////////////
     
     static final String SALETRABAJADOR="Sale trabajador";
     static final String LIMPIARSALIDA="Limpiar registro salida";
+    static final String ACEPTAINGRESO="Acepta registro ingreso";
+    static final String CANCELAINGRESO="Acepta registro ingreso almacen";
+    static final String ACEPTASALIDA="Acepta registro salida";
+    static final String CANCELASALIDA="Acepta registro salida almacen";
+    static final String CONSULTAEMPLEADO="Realiza consulta empleado vigente";
     
 }

@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Conector {
-    private final String url = "jdbc:postgresql://localhost/test";
+    private final String url = "jdbc:postgresql://localhost/xp";
     private final String user = "postgres";
-    private final String password = "postgres";
+    private final String password = "0488ecl";
     public static Connection conn; 
     public Conector()
     {
