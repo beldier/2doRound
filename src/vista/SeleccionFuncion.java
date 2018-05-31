@@ -14,6 +14,8 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
  */
 public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVista{
 
+    private ConsultaInstancia listaInstancia;
+
     /**
      * Creates new form SeleccionFuncion
      */
@@ -147,7 +149,7 @@ public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVist
     }//GEN-LAST:event_jRegistroPersonalActionPerformed
 
     private void jHabilitadosInstanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHabilitadosInstanciaActionPerformed
-        // TODO add your handling code here:
+        listaInstancia =  new ConsultaInstancia();
     }//GEN-LAST:event_jHabilitadosInstanciaActionPerformed
 
 

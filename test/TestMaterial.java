@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import Controlador.Conector;
 import Modelo.Dao.MaterialDao;
 import Modelo.Material;
 import junit.framework.Assert;
@@ -33,35 +34,32 @@ public class TestMaterial {
     
     @Before
     public void setUp() {
+    Conector c=new Conector();
     }
     
     @After
     public void tearDown() {
     }
      @Test
-     public void compraMaterialNuevo() {
-        Material m= new Material();
-        MaterialDao md=new MaterialDao();
-        
-    
-     }
-     @Test
      public void salidaMaterialInexistente() {
+        
         Material m= new Material();
         MaterialDao md=new MaterialDao();
-        Assert.assertFalse(md.salidaMaterial("7914042", "Detergente", 25));
+        Assert.assertFalse(md.salidaMaterial(7914042, "hoja", 25));
      }
      @Test
      public void SalidaCantidadesNegativas() {
         Material m= new Material();
         MaterialDao md=new MaterialDao();
-        Assert.assertFalse(md.salidaMaterial("7914042", "Detergente", -25));
+        Assert.assertFalse(md.salidaMaterial(7914042, "Detergente", -25));
      }
+     @Test
      public void IngresoCantidadesNegativas() {
         Material m= new Material();
         MaterialDao md=new MaterialDao();
-        Assert.assertFalse(md.ingresarMaterial("casa ideas", "Detergente", -25));
+        Assert.assertFalse(md.ingresoMaterial("casa ideas", "Detergente", -25));
      }
+     
      
      
 }

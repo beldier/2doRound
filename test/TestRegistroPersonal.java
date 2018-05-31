@@ -4,12 +4,16 @@
  * and open the template in the editor.
  */
 
+import Controlador.Conector;
+import Modelo.Empleado;
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import vista.ConsultaEmpleado;
 
 /**
  *
@@ -30,6 +34,8 @@ public class TestRegistroPersonal {
     
     @Before
     public void setUp() {
+        Conector c=new Conector();
+    
     }
     
     @After
@@ -42,7 +48,15 @@ public class TestRegistroPersonal {
     
     @Test
     public void reportePersonalActivo() {
-    
+    Empleado e=new Empleado();
+    e.setCi("7914042");
+    e.setNombre("eli");
+    e.setApellido("cusi");
+    ArrayList emp =new ArrayList <Empleado> ();
+    emp.add(e);
+    ConsultaEmpleado c=new ConsultaEmpleado();
+    c.llenarJTable(emp);
+    c.init();
     }
     
 }
