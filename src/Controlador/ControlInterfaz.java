@@ -4,6 +4,7 @@ package Controlador;
 import static Controlador.Conector.getConnection;
 import Modelo.Empleado;
 import Modelo.Dao.EmpleadoDao;
+import Modelo.Dao.trabajadorDAO;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +18,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import vista.ConsultaEmpleado;
 import vista.IngresoAlmacen;
 import vista.PantallaIngresoSalida;
@@ -25,6 +28,7 @@ import vista.RegistroSalida;
 import vista.SalidaAlmacen;
 import vista.SeleccionFuncion;
 import vista.VacacionEmpleado;
+import vista.jfregistrar;
 
 
 
@@ -39,6 +43,7 @@ public class ControlInterfaz implements ActionListener {
     private SalidaAlmacen salidaAlmacen;
     private VacacionEmpleado vacacion;
     private RegistroComedor comedor;
+    private jfregistrar vistaC;
     public ControlInterfaz(SeleccionFuncion s)
     {
         this.seleccionFuncion=s;
@@ -51,7 +56,7 @@ public class ControlInterfaz implements ActionListener {
         //System.out.println(orden);
         switch(orden){
             ////////////////////////////SOLO PARA ABRIR VENTANAS 
-            case "Abrir registro ingreso":break;
+            case "Abrir registro ingreso":abrirRegistroIngreso();break;
             case "Abrir registro salida":abrirRegistroSalida();break;
             case "Abrir registro personal":abrirConsultaEmpleado();break;
             case "Abrir habilitados instancia":break;
@@ -74,7 +79,72 @@ public class ControlInterfaz implements ActionListener {
             case "Solicita comida":solicitaComida();break;
             case "Cancela comida":cancelaComida();break;
             default :System.out.println("Error en actioncomand");break;    
-        }        
+        } 
+        
+        if(e.getSource() == vistaC.btnregistrar)
+            insertaTrabajador();
+         if(e.getSource()== vistaC.btnlistar){
+            llenarTabla(vistaC.jtdatos);
+        }
+    }
+    public void abrirRegistroIngreso()
+    {
+        vistaC=new jfregistrar();
+        vistaC.setVisible(true);
+        vistaC.setLocationRelativeTo(null);
+            
+       vistaC.btnregistrar.addActionListener(this);
+       vistaC.btnlistar.addActionListener(this);
+    }
+         
+    public void llenarTabla(JTable tablaD){
+        System.out.println("Controlador.ControlInterfaz.llenarTabla()");
+        trabajadorDAO modeloC=new trabajadorDAO();
+        DefaultTableModel modeloT = new DefaultTableModel();
+        tablaD.setModel(modeloT);
+        
+        modeloT.addColumn("Codigo Trabajador");
+        modeloT.addColumn("C.I");
+        modeloT.addColumn("Nombre");
+        modeloT.addColumn("Apellido");
+        modeloT.addColumn("Hora");
+        modeloT.addColumn("Fecha");
+        
+        Object [] columna = new Object [6];
+        int numRegistros = modeloC.ListTrabajador().size();
+        for (int i = 0; i<numRegistros; i++){
+            columna[0] = modeloC.ListTrabajador().get(i).getCod_empleado();
+            columna[1] = modeloC.ListTrabajador().get(i).getCiempleado();
+            columna[2] = modeloC.ListTrabajador().get(i).getNombre();
+            columna[3] = modeloC.ListTrabajador().get(i).getApellido();
+            columna[4] = modeloC.ListTrabajador().get(i).getHora();
+            columna[5] = modeloC.ListTrabajador().get(i).getFecha();
+            modeloT.addRow(columna);
+        
+        }
+    }
+    
+    public void insertaTrabajador()
+    {
+        System.out.println("Controlador.ControlInterfaz.insertaTrabajador()");
+        trabajadorDAO modeloC=new trabajadorDAO();     
+        String cod_empleado = vistaC.txtcodigo.getText();
+        String ciempleado = vistaC.txtci.getText();
+        String nombre = vistaC.txtnombre.getText();
+        String apellido = vistaC.txtapellido.getText();
+        String hora = vistaC.txthora.getText();
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
+        String fecha = formatoFecha.format(vistaC.jdfecha.getDate());    
+        String respuestaRegistro = modeloC.insertTrabajador(cod_empleado, ciempleado, nombre, apellido, fecha, hora);
+            if(respuestaRegistro!=null){
+                JOptionPane.showMessageDialog(null, respuestaRegistro);
+            }
+            /*else{
+                JOptionPane.showMessageDialog(null, "Registro Erroneo");
+             }*/
+        //else{
+            //System.out.println("No funciona el boton listar");
+       // }
     }
     public void abrirRegistroComedor()
     {
