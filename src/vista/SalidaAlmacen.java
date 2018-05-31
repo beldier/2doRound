@@ -6,6 +6,7 @@
 package vista;
 
 import Controlador.ControlInterfaz;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,7 +17,13 @@ public class SalidaAlmacen extends javax.swing.JFrame implements InterfazVista{
     /**
      * Creates new form Salida_Almacen
      */
-    public SalidaAlmacen() {
+    private ArrayList <String> nombe;
+    private ArrayList <String> nombm;
+    
+    public SalidaAlmacen(ArrayList <String> a,ArrayList <String> b) {
+        nombe =a;
+        nombm=b;
+        
         init();
     }
 
@@ -34,9 +41,9 @@ public class SalidaAlmacen extends javax.swing.JFrame implements InterfazVista{
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        empleado = new javax.swing.JComboBox<>();
+        producto = new javax.swing.JComboBox<>();
+        jCantidad = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,11 +57,11 @@ public class SalidaAlmacen extends javax.swing.JFrame implements InterfazVista{
 
         jLabel3.setText("Cantidad");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        empleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        producto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jTextField1.setText("jTextField1");
+        jCantidad.setText("jTextField1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,10 +80,10 @@ public class SalidaAlmacen extends javax.swing.JFrame implements InterfazVista{
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING))))
                 .addGap(82, 82, 82)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cancelar)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -85,15 +92,15 @@ public class SalidaAlmacen extends javax.swing.JFrame implements InterfazVista{
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptar)
@@ -112,12 +119,12 @@ public class SalidaAlmacen extends javax.swing.JFrame implements InterfazVista{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aceptar;
     private javax.swing.JButton cancelar;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> empleado;
+    private javax.swing.JTextField jCantidad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> producto;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -129,10 +136,42 @@ public class SalidaAlmacen extends javax.swing.JFrame implements InterfazVista{
     @Override
     public void init() {
         initComponents();
+        empleado.removeAllItems();
+        producto.removeAllItems();
+
+        llenarComboEmpleado(nombe);
+        llenarComboMaterial (nombm);
+       
         setVisible(true);
         setLocationRelativeTo(null);
         aceptar.setActionCommand(ACEPTASALIDA);
         cancelar.setActionCommand(CANCELASALIDA);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+     public void llenarComboEmpleado(ArrayList <String> a){
+        for(int i=0; i<a.size();i++){
+            empleado.addItem(a.get(i));
+        }
+    }
+    public void llenarComboMaterial(ArrayList <String> a){
+        for(int i=0; i<a.size();i++){
+            producto.addItem(a.get(i));
+        }
+    }
+    public String getProducto(){
+        String prod=(String)producto.getSelectedItem();
+        System.out.print(prod);
+        return prod;
+    }
+    public int getCiEmpleado(){
+        int ci=Integer.parseInt((String)empleado.getSelectedItem());
+        System.out.print(ci);
+        return ci;
+    }
+    public int getCantidad(){
+        return Integer.parseInt(jCantidad.getText().trim());
+    }
+    public void cerrar(){
+        setVisible(false);
     }
 }

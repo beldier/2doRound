@@ -6,6 +6,7 @@
 package vista;
 
 import Controlador.ControlInterfaz;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,8 +17,15 @@ public class IngresoAlmacen extends javax.swing.JFrame implements InterfazVista 
     /**
      * Creates new form Ingreso_Almacen
      */
-    public IngresoAlmacen() {
+    private ArrayList <String> nombp;
+    private ArrayList <String> nombm;
+    public IngresoAlmacen(ArrayList <String> a,ArrayList <String> b) {
+//        proveedor.removeAllItems();
+  //      producto.removeAllItems();
+        nombp =a;
+        nombm=b;
         init();
+        
     }
 
     /**
@@ -34,9 +42,9 @@ public class IngresoAlmacen extends javax.swing.JFrame implements InterfazVista 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        proveedor = new javax.swing.JComboBox<>();
+        producto = new javax.swing.JComboBox<>();
+        jCantidad = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,11 +58,16 @@ public class IngresoAlmacen extends javax.swing.JFrame implements InterfazVista 
 
         jLabel3.setText("Cantidad Ingresada");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        proveedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        proveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proveedorActionPerformed(evt);
+            }
+        });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        producto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jTextField1.setText("jTextField1");
+        jCantidad.setText("jTextField1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,10 +86,10 @@ public class IngresoAlmacen extends javax.swing.JFrame implements InterfazVista 
                             .addComponent(jLabel3))))
                 .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cancelarIngreso)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -87,14 +100,14 @@ public class IngresoAlmacen extends javax.swing.JFrame implements InterfazVista 
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(35, 35, 35)
                         .addComponent(jLabel2))
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptarIngreso)
@@ -105,18 +118,22 @@ public class IngresoAlmacen extends javax.swing.JFrame implements InterfazVista 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void proveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proveedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_proveedorActionPerformed
+
    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aceptarIngreso;
     private javax.swing.JButton cancelarIngreso;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JTextField jCantidad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> producto;
+    private javax.swing.JComboBox<String> proveedor;
     // End of variables declaration//GEN-END:variables
    
     
@@ -129,12 +146,42 @@ public class IngresoAlmacen extends javax.swing.JFrame implements InterfazVista 
     @Override
     public void init() {
         initComponents();
+        proveedor.removeAllItems();
+        producto.removeAllItems();
+
+        llenarComboProveedor(nombp);
+        llenarComboMaterial (nombm);
         setVisible(true);
         setLocationRelativeTo(null);
         aceptarIngreso.setActionCommand(ACEPTAINGRESO);
         cancelarIngreso.setActionCommand(CANCELAINGRESO);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
+    public void llenarComboProveedor(ArrayList <String> a){
+        for(int i=0; i<a.size();i++){
+            proveedor.addItem(a.get(i));
+        }
+    }
+    public void llenarComboMaterial(ArrayList <String> a){
+        for(int i=0; i<a.size();i++){
+            producto.addItem(a.get(i));
+        }
+    }
+    public void cerrar(){
+        setVisible(false);
+    }
 
-    
+        public String getProducto(){
+        String prod=(String)producto.getSelectedItem();
+        System.out.print(prod);
+        return prod;
+    }
+    public String getProveedor(){
+        String prov=(String)proveedor.getSelectedItem();
+        System.out.print(prov);
+        return prov;
+    }
+    public int getCantidad(){
+        return Integer.parseInt(jCantidad.getText().trim());
+    }
 }

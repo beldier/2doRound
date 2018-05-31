@@ -6,6 +6,9 @@
 package vista;
 
 import Controlador.ControlInterfaz;
+import Modelo.Empleado;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -18,6 +21,7 @@ public class ConsultaEmpleado extends javax.swing.JFrame implements InterfazVist
      */
     public ConsultaEmpleado() {
         init();
+        
     }
 
     /**
@@ -30,23 +34,23 @@ public class ConsultaEmpleado extends javax.swing.JFrame implements InterfazVist
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaEmpleado = new javax.swing.JTable();
         consulta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaEmpleado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "CI", "NOMBRE", "APELLIDOS"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaEmpleado);
 
         consulta.setText("Realizar consulta");
         consulta.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +92,7 @@ public class ConsultaEmpleado extends javax.swing.JFrame implements InterfazVist
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton consulta;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaEmpleado;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -104,5 +108,19 @@ public class ConsultaEmpleado extends javax.swing.JFrame implements InterfazVist
         setLocationRelativeTo(null);
         consulta.setActionCommand(CONSULTAEMPLEADO);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+    public void llenarJTable(ArrayList<Empleado> e){
+        DefaultTableModel modelo =(DefaultTableModel) tablaEmpleado.getModel();
+        Object O[]=null;
+        for (int i = 0; i < e.size(); i++) {
+        modelo.addRow(O);
+        //Persona getP = (Persona) P.get(i);
+        Empleado emp =e.get(i);
+        //tablaEmpleado.setValueAt(, i, 0);
+        modelo.setValueAt(emp.getCi(), i, 0);
+        modelo.setValueAt(emp.getNombre(), i, 1);
+        modelo.setValueAt(emp.getApellido(), i, 2);
+        //init();
+    }
     }
 }

@@ -4,6 +4,8 @@ package Controlador;
 import static Controlador.Conector.getConnection;
 import Modelo.Empleado;
 import Modelo.Dao.EmpleadoDao;
+import Modelo.Dao.MaterialDao;
+import Modelo.Dao.ProveedorDao;
 import Modelo.Dao.trabajadorDAO;
 
 import java.awt.event.ActionEvent;
@@ -14,6 +16,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -53,7 +56,7 @@ public class ControlInterfaz implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String orden=e.getActionCommand();
-        //System.out.println(orden);
+        System.out.println(orden);
         switch(orden){
             ////////////////////////////SOLO PARA ABRIR VENTANAS 
             case "Abrir registro ingreso":abrirRegistroIngreso();break;
@@ -78,14 +81,60 @@ public class ControlInterfaz implements ActionListener {
             case "Salir ventana vacacion":salirVentantaVacacion();break;
             case "Solicita comida":solicitaComida();break;
             case "Cancela comida":cancelaComida();break;
+             case "Acepta registro ingreso":aceptaIngresoAlmacen();break;
+            case "Cancela registro ingreso almacen":cancelaIngresoAlmacen();break;
+            case "Acepta registro salida":aceptaSalidaAlmacen();break;
+            case "Cancela registro salida almacen":cancelaSalidaAlmacen();break;
+            case "Realiza consulta empleado vigente":realizaConsulta();break;
             default :System.out.println("Error en actioncomand");break;    
         } 
-        
-        if(e.getSource() == vistaC.btnregistrar)
-            insertaTrabajador();
-         if(e.getSource()== vistaC.btnlistar){
-            llenarTabla(vistaC.jtdatos);
+        try{
+            if(e.getSource() == vistaC.btnregistrar)
+                 insertaTrabajador();
+            if(e.getSource()== vistaC.btnlistar)
+                llenarTabla(vistaC.jtdatos);
         }
+        catch(Exception a){
+                System.out.println("insertar/llenar");
+                
+          }
+      
+        
+    }
+        private void aceptaIngresoAlmacen() {
+        String prov= ingresoAlmacen.getProveedor();
+        String mat=ingresoAlmacen.getProducto();
+        int cant =ingresoAlmacen.getCantidad();
+        System.out.println(prov+" "+mat+" "+cant);
+        MaterialDao m=new MaterialDao();
+        m.ingresoMaterial(prov, mat, cant);
+        ingresoAlmacen.cerrar();
+    }
+
+    private void cancelaIngresoAlmacen() {
+        ingresoAlmacen.cerrar();
+    }
+
+    private void aceptaSalidaAlmacen() {
+        int ci= salidaAlmacen.getCiEmpleado();
+        String mat=salidaAlmacen.getProducto();
+        int cant =salidaAlmacen.getCantidad();
+        System.out.println(ci+" "+mat+" "+cant);
+        MaterialDao m=new MaterialDao();
+        m.salidaMaterial(ci, mat, cant);   
+        ingresoAlmacen.cerrar();
+    }
+
+    private void cancelaSalidaAlmacen() {
+        salidaAlmacen.cerrar();
+    }
+
+    private void realizaConsulta() {
+        System.out.println("............");
+        EmpleadoDao e=new EmpleadoDao();
+        ArrayList Emp=e.consultaEmpleadoActivo();
+        consultaEmpleado.llenarJTable(Emp);
+       
     }
     public void abrirRegistroIngreso()
     {
@@ -316,15 +365,29 @@ public class ControlInterfaz implements ActionListener {
         consultaEmpleado.setControlador(this);
     }
 
-    private void abrirIngresoAlmacen() {
-        ingresoAlmacen=new IngresoAlmacen();
+   private void abrirIngresoAlmacen() {
+        MaterialDao m= new MaterialDao();
+        ArrayList a= new ArrayList <String> ();
+        a=m.getListaMateriales();
+        ProveedorDao p= new ProveedorDao();
+        ArrayList b= new ArrayList <String> ();
+        b=p.getListaMateriales();
+        
+        ingresoAlmacen=new IngresoAlmacen(b,a);
         ingresoAlmacen.setControlador(this);
+        
     }
 
     private void abrirSalidaAlmacen() {
-        salidaAlmacen=new SalidaAlmacen();
+        MaterialDao m= new MaterialDao();
+        ArrayList a= new ArrayList <String> ();
+        a=m.getListaMateriales();
+        EmpleadoDao p= new EmpleadoDao();
+        ArrayList b= new ArrayList <String> ();
+        b=p.getListaEmpleados();
+        
+        salidaAlmacen=new SalidaAlmacen(b,a);
         salidaAlmacen.setControlador(this);
     }
-    
 
 }

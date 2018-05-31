@@ -137,4 +137,47 @@ public class EmpleadoDao {
         }
     
     }
+       public ArrayList consultaEmpleadoActivo()
+    {
+        ArrayList empleados =new ArrayList <Empleado> ();
+        Connection conn=getConnection();
+        String query="select ciempleado, nombre, apellido from empleado where activo=true";
+        System.out.println(query);
+        Empleado c=null;
+        try {
+            Statement stat = conn.createStatement();
+            ResultSet rs =((java.sql.Statement) stat).executeQuery(query);
+            while(rs.next()){
+                c=new Empleado();
+                c.setCi(rs.getString("ciempleado"));
+                System.out.println(c.getCi());
+                c.setNombre(rs.getString("nombre"));
+                c.setNombre(rs.getString("apellido"));
+            }            
+        }catch (SQLException e) {
+             System.out.println(e.getMessage());
+        }   
+        return empleados;
+    }
+    
+    public ArrayList<String> getListaEmpleados()
+    {
+        Connection conn=getConnection();
+        String query="select ciempleado from empleado";
+        System.out.println(query);
+        Empleado c=null;
+        ArrayList empleados =new ArrayList<String>();
+        try {
+            Statement stat = conn.createStatement();
+            ResultSet rs =((java.sql.Statement) stat).executeQuery(query);
+            while(rs.next()){
+                c=new Empleado();
+                c.setCi(Integer.toString(rs.getInt("ciempleado")));
+                empleados.add(c.getCi());
+            }            
+        }catch (SQLException e) {
+             System.out.println(e.getMessage());
+        }   
+        return empleados;
+    }        
 }
