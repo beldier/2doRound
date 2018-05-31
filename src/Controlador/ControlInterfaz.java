@@ -20,6 +20,7 @@ import javax.swing.JOptionPane;
 import vista.ConsultaEmpleado;
 import vista.IngresoAlmacen;
 import vista.PantallaIngresoSalida;
+import vista.RegistroComedor;
 import vista.RegistroSalida;
 import vista.SalidaAlmacen;
 import vista.SeleccionFuncion;
@@ -37,6 +38,7 @@ public class ControlInterfaz implements ActionListener {
     private IngresoAlmacen ingresoAlmacen;
     private SalidaAlmacen salidaAlmacen;
     private VacacionEmpleado vacacion;
+    private RegistroComedor comedor;
     public ControlInterfaz(SeleccionFuncion s)
     {
         this.seleccionFuncion=s;
@@ -53,7 +55,7 @@ public class ControlInterfaz implements ActionListener {
             case "Abrir registro salida":abrirRegistroSalida();break;
             case "Abrir registro personal":abrirConsultaEmpleado();break;
             case "Abrir habilitados instancia":break;
-            case "Abrir registro comedor":break;
+            case "Abrir registro comedor":abrirRegistroComedor();break;
             case "Abrir cronograma mantenimiento":break;
             case "Abrir ubicacion custodia bienes":break;
             case "Abrir materiales consumibles":abrirIngresoSalida();break;
@@ -69,8 +71,71 @@ public class ControlInterfaz implements ActionListener {
             case "Buscar dias vacacion":buscarDiasVacacion();break;
             case "Otorgar vacacion":otorgarVacacion();break;
             case "Salir ventana vacacion":salirVentantaVacacion();break;
+            case "Solicita comida":solicitaComida();break;
+            case "Cancela comida":cancelaComida();break;
             default :System.out.println("Error en actioncomand");break;    
         }        
+    }
+    public void abrirRegistroComedor()
+    {
+        comedor=new RegistroComedor();
+        comedor.setControlador(this);
+    }
+    public void cancelaComida()
+    {
+        comedor.dispose();
+    }
+    public void solicitaComida()
+    {
+        Empleado e=new EmpleadoDao().getEmpleado(comedor.getCi());
+        if(e!=null){
+            SimpleDateFormat df = new SimpleDateFormat("YYYY/MM/dd hh:mm:ss");
+            Calendar calendar = Calendar.getInstance();
+            Date horaActual=calendar.getTime();
+            boolean posibleAlmuerzo=ControlHora.horaAlmuerzo(horaActual);
+            boolean posibleCena=ControlHora.horaCena(horaActual);
+            if(posibleAlmuerzo==true || posibleCena==true){
+                boolean duplicado=false;
+                if(posibleAlmuerzo==true){
+                    duplicado=new EmpleadoDao().verificarAlmuerzo(comedor.getCi());
+                    if(duplicado==false){
+                        new EmpleadoDao().almuerzo(ControlHora.getDia(), comedor.getCi());
+                        comedor.exito();
+                        comedor.limpiar();
+                    }
+                    else
+                    {
+                        comedor.errorDuplicado();
+                        comedor.limpiar();
+                    }
+                }
+                else{
+                    duplicado=new EmpleadoDao().verificarCena(comedor.getCi());
+                    if(duplicado==false){
+                        new EmpleadoDao().cena(ControlHora.getDia(), comedor.getCi());
+                        comedor.exito();
+                        comedor.limpiar();
+                    }
+                    else
+                    {
+                        comedor.errorDuplicado();
+                        comedor.limpiar();
+                    }
+                }
+            }
+            else
+            {
+                comedor.errorFueraHorario();
+                comedor.limpiar();
+            
+            }
+            
+        }
+        else
+        {
+            comedor.noExisteCi();
+            comedor.limpiar();
+        }
     }
     public void abrirRegistroVacacion()
     {
@@ -126,8 +191,7 @@ public class ControlInterfaz implements ActionListener {
     }
     public void salirVentantaVacacion()
     {
-             System.out.println("salir");
-   
+        vacacion.dispose();
     }
     public void abrirRegistroSalida()
     {   

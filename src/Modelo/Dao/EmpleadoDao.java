@@ -81,4 +81,60 @@ public class EmpleadoDao {
                 e.printStackTrace();
         }
     }
+    public boolean verificarAlmuerzo(int ci)
+    {
+        boolean ans=true;
+        Connection conn=getConnection();
+        String query="select ciEmpleado from registroAlmuerzo where ciEmpleado="+ci;
+        try {
+            Statement stat = conn.createStatement();
+            ResultSet rs =((java.sql.Statement) stat).executeQuery(query);
+            if(!rs.next())
+                ans=false;
+        }catch (SQLException e) {
+             System.out.println(e.getMessage());
+        }   
+        return ans;
+    }
+    public boolean verificarCena(int ci)
+    {
+        boolean ans=true;
+        Connection conn=getConnection();
+        String query="select ciEmpleado from registroCena where ciEmpleado="+ci;
+        try {
+            Statement stat = conn.createStatement();
+            ResultSet rs =((java.sql.Statement) stat).executeQuery(query);
+            if(!rs.next())
+                ans=false;
+        }catch (SQLException e) {
+             System.out.println(e.getMessage());
+        }   
+        return ans;
+    }
+    public void almuerzo(String fecha,int ci)
+    {
+        Connection c=getConnection();
+        String query="insert into registroAlmuerzo(fecha,ciEmpleado) values('"+fecha+"',"+ci+")";
+        try {
+            PreparedStatement pstmt;
+            pstmt = c.prepareStatement(query);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+                e.printStackTrace();
+        }
+    
+    }
+    public void cena(String fecha,int ci)
+    {
+            Connection c=getConnection();
+        String query="insert into registroCena(fecha,ciEmpleado) values('"+fecha+"',"+ci+")";
+        try {
+            PreparedStatement pstmt;
+            pstmt = c.prepareStatement(query);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+                e.printStackTrace();
+        }
+    
+    }
 }

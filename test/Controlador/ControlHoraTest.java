@@ -80,4 +80,76 @@ public class ControlHoraTest {
         fail("The test case is a prototype.");
     }*/
     
+    @Test
+    public void testHoraAlmuerzo() {
+        System.out.println("horaAlmuerzo");
+        
+        boolean expResult = false;
+        Calendar cal = Calendar.getInstance();  
+        cal.setTime(new Date());  
+        cal.set(Calendar.HOUR_OF_DAY, 11);  
+        cal.set(Calendar.MINUTE, 1);  
+        cal.set(Calendar.SECOND, 59);
+        Date horaActual = cal.getTime();
+        boolean result = ControlHora.horaAlmuerzo(horaActual);
+        assertEquals(true, result);
+        
+        cal.set(Calendar.HOUR_OF_DAY, 10);  
+        cal.set(Calendar.MINUTE, 59);  
+        cal.set(Calendar.SECOND, 59);
+        horaActual = cal.getTime();
+        result = ControlHora.horaAlmuerzo(horaActual);
+        assertEquals(false, result);
+        
+        cal.set(Calendar.HOUR_OF_DAY, 13);  
+        cal.set(Calendar.MINUTE, 59);  
+        cal.set(Calendar.SECOND, 59);
+        horaActual = cal.getTime();
+        result = ControlHora.horaAlmuerzo(horaActual);
+        assertEquals(true, result);
+        
+        cal.set(Calendar.HOUR_OF_DAY, 14);  
+        cal.set(Calendar.MINUTE, 1);  
+        cal.set(Calendar.SECOND, 00);
+        horaActual = cal.getTime();
+        result = ControlHora.horaAlmuerzo(horaActual);
+        assertEquals(false, result);
+        
+    }
+
+    @Test
+    public void testHoraCena() {
+        System.out.println("horaCena");
+        boolean expResult = false;
+        Calendar cal = Calendar.getInstance();  
+        cal.setTime(new Date());  
+        
+        cal.set(Calendar.HOUR_OF_DAY, 17);  
+        cal.set(Calendar.MINUTE, 1);  
+        cal.set(Calendar.SECOND, 59);
+        Date horaActual = cal.getTime();
+        boolean result = ControlHora.horaCena(horaActual);
+        assertEquals(true, result);
+        
+        cal.set(Calendar.HOUR_OF_DAY, 16);  
+        cal.set(Calendar.MINUTE, 59);  
+        cal.set(Calendar.SECOND, 59);
+        horaActual = cal.getTime();
+        result = ControlHora.horaCena(horaActual);
+        assertEquals(false, result);
+        
+        cal.set(Calendar.HOUR_OF_DAY, 18);  
+        cal.set(Calendar.MINUTE, 59);  
+        cal.set(Calendar.SECOND, 59);
+        horaActual = cal.getTime();
+        result = ControlHora.horaCena(horaActual);
+        assertEquals(true, result);
+        
+        cal.set(Calendar.HOUR_OF_DAY, 20);  
+        cal.set(Calendar.MINUTE, 1);  
+        cal.set(Calendar.SECOND, 00);
+        horaActual = cal.getTime();
+        result = ControlHora.horaCena(horaActual);
+        assertEquals(false, result);
+    }
 }

@@ -34,5 +34,8 @@ public interface InterfazVista {
     static final String BUSCARDIASVACACION="Buscar dias vacacion";
     static final String OTORGARVACACION="Otorgar vacacion";
     static final String SALIRVENTANAVACACION="Salir ventana vacacion";
+    static final String SOLICITACOMIDA="Solicita comida";
+    static final String CANCELARCOMIDA="Cancela comida";
+
     
 }
