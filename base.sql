@@ -1,65 +1,143 @@
 
-CREATE TABLE Plan_area (
-    nombre_area TEXT  NOT NULL,
-    precio INTEGER,
-    CONSTRAINT PK_Plan_area PRIMARY KEY (nombre_area)
+CREATE TABLE Estudiante (
+    idEstudiante SERIAL  NOT NULL,
+    CONSTRAINT PK_Estudiante PRIMARY KEY (idEstudiante)
 );
 
-CREATE TABLE Promocion (
-    id_promocion SERIAL  NOT NULL,
-    descuento DOUBLE PRECISION,
+CREATE TABLE Area (
+    idArea SERIAL  NOT NULL,
     nombre TEXT,
-    activo BOOLEAN default false,
-    CONSTRAINT PK_Promocion PRIMARY KEY (id_promocion)
+    CONSTRAINT PK_Area PRIMARY KEY (idArea)
 );
 
-CREATE TABLE Genero (
-    id_genero SERIAL  NOT NULL,
+CREATE TABLE Material (
+    idMaterial SERIAL  NOT NULL,
     nombre TEXT,
-    CONSTRAINT PK_Genero PRIMARY KEY (id_genero)
+    cantidad INTEGER,
+    CONSTRAINT PK_Material PRIMARY KEY (idMaterial)
 );
 
-CREATE TABLE Cliente (
-    ci_cliente TEXT  NOT NULL,
+CREATE TABLE Proveedor (
+    idProveedor SERIAL  NOT NULL,
+    nombre TEXT,
+    CONSTRAINT PK_Proveedor PRIMARY KEY (idProveedor)
+);
+
+CREATE TABLE Empleado (
+    ciEmpleado INTEGER  NOT NULL,
     nombre TEXT,
     apellido TEXT,
-    fecha_nacimiento DATE,
-    activo BOOLEAN default TRUE,
-    id_genero INTEGER,
-    CONSTRAINT PK_Cliente PRIMARY KEY (ci_cliente)
+    fecha_contratacion DATE,
+    activo BOOLEAN,
+    idArea INTEGER,
+    diasTomados INTEGER,
+    cod_empleado TEXT,
+    fecha DATE,
+    hora TEXT,
+    CONSTRAINT PK_Empleado PRIMARY KEY (ciEmpleado)
 );
 
-CREATE TABLE Suscripcion (
-    id_suscripcion SERIAL  NOT NULL,
-    fecha_suscripcion TEXT,
-    cantidad_sesiones INTEGER,
-    sesiones_restantes INTEGER,
-    ci_cliente TEXT  NOT NULL,
-    id_promocion INTEGER,
-    nombre_area TEXT,
-    CONSTRAINT PK_Suscripcion PRIMARY KEY (id_suscripcion, ci_cliente)
+CREATE TABLE Docente (
+    ciEmpleado INTEGER  NOT NULL,
+    CONSTRAINT PK_Docente PRIMARY KEY (ciEmpleado)
+);
+
+CREATE TABLE Registro_Salida (
+    idRegistroSalida SERIAL  NOT NULL,
+    ciEmpleado INTEGER  NOT NULL,
+    horaSalida DATE,
+    CONSTRAINT PK_Registro_Salida PRIMARY KEY (idRegistroSalida, ciEmpleado)
 );
 
 CREATE TABLE Registro_Entrada (
-    id_registro_entrada SERIAL  NOT NULL,
-    fecha DATE,
-    id_suscripcion INTEGER  NOT NULL,
-    ci_cliente TEXT  NOT NULL,
-    CONSTRAINT PK_Registro_Entrada PRIMARY KEY (id_registro_entrada, id_suscripcion, ci_cliente)
+    idRegistroEntrada SERIAL  NOT NULL,
+    horaIngreso DATE,
+    ciEmpleado INTEGER  NOT NULL,
+    CONSTRAINT PK_Registro_Entrada PRIMARY KEY (idRegistroEntrada, ciEmpleado)
 );
 
-ALTER TABLE Cliente ADD CONSTRAINT Genero_Cliente 
-    FOREIGN KEY (id_genero) REFERENCES Genero (id_genero);
+CREATE TABLE Ingreso (
+    idIngreso SERIAL  NOT NULL,
+    date DATE,
+    idProveedor INTEGER  NOT NULL,
+    idMaterial INTEGER  NOT NULL,
+    cantidadIngreso INTEGER,
+    CONSTRAINT PK_Ingreso PRIMARY KEY (idIngreso, idProveedor, idMaterial)
+);
 
-ALTER TABLE Suscripcion ADD CONSTRAINT Cliente_Suscripcion 
-    FOREIGN KEY (ci_cliente) REFERENCES Cliente (ci_cliente);
+CREATE TABLE Salida (
+    idSalida SERIAL  NOT NULL,
+    fecha DATE,
+    ciEmpleado INTEGER  NOT NULL,
+    idMaterial INTEGER  NOT NULL,
+    cantidadSalida INTEGER,
+    CONSTRAINT PK_Salida PRIMARY KEY (idSalida, ciEmpleado, idMaterial)
+);
 
-ALTER TABLE Suscripcion ADD CONSTRAINT Plan_area_Suscripcion 
-    FOREIGN KEY (nombre_area) REFERENCES Plan_area (nombre_area);
+CREATE TABLE RegistroAlmuerzo (
+    idRegistroAlmuerzo SERIAL  NOT NULL,
+    fecha DATE  NOT NULL,
+    ciEmpleado INTEGER  NOT NULL,
+    CONSTRAINT PK_RegistroAlmuerzo PRIMARY KEY (idRegistroAlmuerzo, ciEmpleado)
+);
 
-ALTER TABLE Suscripcion ADD CONSTRAINT Promocion_Suscripcion 
-    FOREIGN KEY (id_promocion) REFERENCES Promocion (id_promocion);
+CREATE TABLE RegistroCena (
+    idRegistroCena SERIAL  NOT NULL,
+    fecha DATE  NOT NULL,
+    ciEmpleado INTEGER  NOT NULL,
+    CONSTRAINT PK_RegistroCena PRIMARY KEY (idRegistroCena, ciEmpleado)
+);
 
-ALTER TABLE Registro_Entrada ADD CONSTRAINT Suscripcion_Registro_Entrada 
-    FOREIGN KEY (id_suscripcion, ci_cliente) REFERENCES Suscripcion (id_suscripcion,ci_cliente);
+CREATE TABLE Materia (
+    idMateria SERIAL  NOT NULL,
+    nombre TEXT,
+    ciEmpleado INTEGER,
+    CONSTRAINT PK_Materia PRIMARY KEY (idMateria)
+);
 
+CREATE TABLE Inscripcion (
+    idInscripcion SERIAL  NOT NULL,
+    idEstudiante INTEGER  NOT NULL,
+    idMateria INTEGER  NOT NULL,
+    promedioFinal INTEGER,
+    CONSTRAINT PK_Inscripcion PRIMARY KEY (idInscripcion, idEstudiante, idMateria)
+);
+
+ALTER TABLE Empleado ADD CONSTRAINT Area_Empleado 
+    FOREIGN KEY (idArea) REFERENCES Area (idArea);
+
+ALTER TABLE Materia ADD CONSTRAINT Docente_Materia 
+    FOREIGN KEY (ciEmpleado) REFERENCES Docente (ciEmpleado);
+
+ALTER TABLE Docente ADD CONSTRAINT Empleado_Docente 
+    FOREIGN KEY (ciEmpleado) REFERENCES Empleado (ciEmpleado);
+
+ALTER TABLE Registro_Salida ADD CONSTRAINT Empleado_Registro_Salida 
+    FOREIGN KEY (ciEmpleado) REFERENCES Empleado (ciEmpleado);
+
+ALTER TABLE Registro_Entrada ADD CONSTRAINT Empleado_Registro_Entrada 
+    FOREIGN KEY (ciEmpleado) REFERENCES Empleado (ciEmpleado);
+
+ALTER TABLE Ingreso ADD CONSTRAINT Proveedor_Ingreso 
+    FOREIGN KEY (idProveedor) REFERENCES Proveedor (idProveedor);
+
+ALTER TABLE Ingreso ADD CONSTRAINT Material_Ingreso 
+    FOREIGN KEY (idMaterial) REFERENCES Material (idMaterial);
+
+ALTER TABLE Salida ADD CONSTRAINT Empleado_Salida 
+    FOREIGN KEY (ciEmpleado) REFERENCES Empleado (ciEmpleado);
+
+ALTER TABLE Salida ADD CONSTRAINT Material_Salida 
+    FOREIGN KEY (idMaterial) REFERENCES Material (idMaterial);
+
+ALTER TABLE Inscripcion ADD CONSTRAINT Estudiante_Inscripcion 
+    FOREIGN KEY (idEstudiante) REFERENCES Estudiante (idEstudiante);
+
+ALTER TABLE Inscripcion ADD CONSTRAINT Materia_Inscripcion 
+    FOREIGN KEY (idMateria) REFERENCES Materia (idMateria);
+
+ALTER TABLE RegistroAlmuerzo ADD CONSTRAINT Empleado_RegistroAlmuerzo 
+    FOREIGN KEY (ciEmpleado) REFERENCES Empleado (ciEmpleado);
+
+ALTER TABLE RegistroCena ADD CONSTRAINT Empleado_RegistroCena 
+    FOREIGN KEY (ciEmpleado) REFERENCES Empleado (ciEmpleado);
