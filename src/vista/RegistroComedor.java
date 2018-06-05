@@ -61,18 +61,20 @@ public class RegistroComedor extends javax.swing.JFrame implements InterfazVista
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(jCi)
+                                .addGap(37, 37, 37))
+                            .addGroup(layout.createSequentialGroup()
                                 .addGap(0, 55, Short.MAX_VALUE)
                                 .addComponent(jOk, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jCi))
-                        .addGap(37, 37, 37))))
+                                .addComponent(jCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(22, 22, 22))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,7 +154,8 @@ public class RegistroComedor extends javax.swing.JFrame implements InterfazVista
         setVisible(true);
         setLocationRelativeTo(null);
         jOk.setActionCommand(SOLICITACOMIDA);
-        jCancelar.setActionCommand(CANCELARCOMIDA);   
+        jCancelar.setActionCommand(CANCELARCOMIDA);
+        
     }
     public int getCi()
     {

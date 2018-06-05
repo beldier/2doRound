@@ -46,8 +46,8 @@
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btnregistrar" min="-2" pref="88" max="-2" attributes="0"/>
                                   <Component id="txthora" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="btnregistrar" min="-2" pref="115" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="faith" name="Controlador.ControlHoraTest" skipped="0" tests="3" time="0.155" timestamp="2018-06-05T00:58:59">
+<testsuite errors="0" failures="0" hostname="faith" name="InstanciaIT" skipped="0" tests="10" time="0.213" timestamp="2018-06-05T00:58:38">
   <properties>
     <property name="netbeans.autoupdate.country" value="US" />
     <property name="javac.test.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
-    <property name="javac.includes" value="Controlador/ControlHoraTest.java" />
+    <property name="javac.includes" value="InstanciaIT.java" />
     <property name="ant.core.lib" value="/home/lurianne/netbeans-8.2/extide/ant/lib/ant.jar" />
     <property name="javadoc.windowtitle" value="" />
     <property name="user.dir" value="/home/lurianne/Documents/sis2/Fail/2doRound" />
@@ -29,7 +29,7 @@
     <property name="libs.hamcrest.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
     <property name="libs.javac-api.javadoc" value="" />
     <property name="os.name" value="Linux" />
-    <property name="test.class" value="Controlador.ControlHoraTest" />
+    <property name="test.class" value="InstanciaIT" />
     <property name="file.reference.jcalendar-1.4.jar" value="lib/jcalendar-1.4.jar" />
     <property name="libs.beans-binding.classpath" value="/home/lurianne/netbeans-8.2/java/modules/ext/beansbinding-1.2.1.jar" />
     <property name="ap.proc.none.internal" value="" />
@@ -42,7 +42,7 @@
     <property name="user.name" value="lurianne" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Controlador.ControlHoraTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/lurianne/Documents/sis2/Fail/2doRound/build/test/results/TEST-Controlador.ControlHoraTest.xml crashfile=/home/lurianne/Documents/sis2/Fail/2doRound/build/junitvmwatcher7318117695173450043.properties propsfile=/home/lurianne/Documents/sis2/Fail/2doRound/build/junit2839220042778714603.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner InstanciaIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/lurianne/Documents/sis2/Fail/2doRound/build/test/results/TEST-InstanciaIT.xml crashfile=/home/lurianne/Documents/sis2/Fail/2doRound/build/junitvmwatcher4150746842779171557.properties propsfile=/home/lurianne/Documents/sis2/Fail/2doRound/build/junit2796852776130293568.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="ant.file.type.Test" value="file" />
@@ -62,7 +62,7 @@
     <property name="netbeans.home" value="/home/lurianne/netbeans-8.2/platform" />
     <property name="build.compiler.emacs" value="true" />
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed" />
-    <property name="test.includes" value="Controlador/ControlHoraTest.java" />
+    <property name="test.includes" value="InstanciaIT.java" />
     <property name="&gt;&gt;&gt;&gt;&gt;&gt;&gt;" value="5ae65149879e3eb50f4d1f9a5fe8026b1e56c060" />
     <property name="netbeans.dynamic.classpath" value="/home/lurianne/netbeans-8.2/platform/core/core.jar:/home/lurianne/netbeans-8.2/platform/core/org-openide-filesystems.jar:/home/lurianne/netbeans-8.2/platform/core/core-base.jar:/home/lurianne/netbeans-8.2/platform/core/org-openide-filesystems-compat8.jar:/home/lurianne/netbeans-8.2/platform/core/asm-all-5.0.1.jar:/home/lurianne/netbeans-8.2/platform/core/org-netbeans-libs-asm.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems_ru.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-netbeans-libs-asm_zh_CN.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-netbeans-libs-asm_ru.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems-compat8_ja.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-netbeans-libs-asm_pt_BR.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core-base_ru.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems-compat8_pt_BR.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core_ru.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems-compat8_ru.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems_zh_CN.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-netbeans-libs-asm_ja.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems_pt_BR.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core-base_pt_BR.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core-base_zh_CN.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core-base_ja.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems-compat8_zh_CN.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core_ja.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core_zh_CN.jar:/home/lurianne/netbeans-8.2/platform/core/locale/org-openide-filesystems_ja.jar:/home/lurianne/netbeans-8.2/platform/core/locale/core_pt_BR.jar:/home/lurianne/netbeans-8.2/nb/core/org-netbeans-upgrader.jar:/home/lurianne/netbeans-8.2/nb/core/locale/org-netbeans-upgrader_zh_CN.jar:/home/lurianne/netbeans-8.2/nb/core/locale/org-netbeans-upgrader_ru.jar:/home/lurianne/netbeans-8.2/nb/core/locale/org-netbeans-upgrader_ja.jar:/home/lurianne/netbeans-8.2/nb/core/locale/core_nb_zh_CN.jar:/home/lurianne/netbeans-8.2/nb/core/locale/core_nb_ja.jar:/home/lurianne/netbeans-8.2/nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/home/lurianne/netbeans-8.2/nb/core/locale/core_nb_ru.jar:/home/lurianne/netbeans-8.2/nb/core/locale/core_nb_pt_BR.jar:/home/lurianne/netbeans-8.2/nb/core/locale/core_nb.jar" />
     <property name="java.vm.specification.version" value="1.8" />
@@ -78,7 +78,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="/" />
-    <property name="javac.includesfile.binary" value="/home/lurianne/Documents/sis2/Fail/2doRound/null545699218" />
+    <property name="javac.includesfile.binary" value="/home/lurianne/Documents/sis2/Fail/2doRound/null1974778921" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
@@ -90,7 +90,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="/home/lurianne/netbeans-8.2/ide/docs/jaxb-api-doc.zip" />
-    <property name="javac.includes.binary" value="/home/lurianne/Documents/sis2/Fail/2doRound/build/test/classes/Controlador/ControlHoraTest.class" />
+    <property name="javac.includes.binary" value="/home/lurianne/Documents/sis2/Fail/2doRound/build/test/classes/InstanciaIT.class" />
     <property name="ant.home" value="/home/lurianne/netbeans-8.2/extide/ant" />
     <property name="libs.junit_4.src" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12-sources.jar" />
     <property name="libs.testng.classpath" value="/home/lurianne/netbeans-8.2/platform/modules/ext/testng-6.8.1-dist.jar" />
@@ -334,12 +334,26 @@
     <property name="/home/lurianne/Documents/sis2/Fail/2doRound/lib/PostgreSQLDriver/postgresql-42.2.2.jar" value="" />
     <property name="" value="======" />
   </properties>
-  <testcase classname="Controlador.ControlHoraTest" name="testHoraCena" time="0.002" />
-  <testcase classname="Controlador.ControlHoraTest" name="testSaleAntes" time="0.0" />
-  <testcase classname="Controlador.ControlHoraTest" name="testHoraAlmuerzo" time="0.0" />
-  <system-out><![CDATA[horaCena
-saleAntes
-horaAlmuerzo
+  <testcase classname="InstanciaIT" name="testSetMateria" time="0.001" />
+  <testcase classname="InstanciaIT" name="testGetN" time="0.001" />
+  <testcase classname="InstanciaIT" name="testSetN" time="0.0" />
+  <testcase classname="InstanciaIT" name="testGetNota" time="0.001" />
+  <testcase classname="InstanciaIT" name="testGetHabilitado" time="0.0" />
+  <testcase classname="InstanciaIT" name="testGetCodigoSis" time="0.0" />
+  <testcase classname="InstanciaIT" name="testSetHabilitado" time="0.0" />
+  <testcase classname="InstanciaIT" name="testGetMateria" time="0.0" />
+  <testcase classname="InstanciaIT" name="testSetCodigoSis" time="0.0" />
+  <testcase classname="InstanciaIT" name="testSetNota" time="0.0" />
+  <system-out><![CDATA[setMateria
+getN
+setN
+getNota
+getHabilitado
+getCodigoSis
+setHabilitado
+getMateria
+setCodigoSis
+setNota
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

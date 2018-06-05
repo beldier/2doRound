@@ -7,6 +7,7 @@ package Modelo.Dao;
 
 import Controlador.Conector;
 import static Controlador.Conector.getConnection;
+import Controlador.ControlInstancia;
 import Modelo.Instancia;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -31,15 +32,9 @@ public class InstanciaDao {
     }
     
     
-    public ArrayList<Instancia>  setFilas(String mate,String doc)
+    public static ArrayList<Instancia>  setFilas(String mate,String doc)
     {
-       /*
-        *select i.idinscripcion ,i.idestudiante,m.nombre,i.promediofinal,i.habilitado
-from inscripcion i ,materia m,docente d
-where m.idmateria=i.idmateria and m.ciempleado=d.ciempleado and m.nombre='calculo'
-and d.nombre='luis'
-and promediofinal>=26 
-        */
+        System.out.println(mate+""+doc ); 
      Connection conn=getConnection();
      ArrayList instancia =new ArrayList<Instancia>();
         String Sql="select i.idinscripcion ,i.idestudiante,m.nombre,i.promediofinal,i.habilitado\n" +
@@ -60,7 +55,7 @@ and promediofinal>=26
                  c=new Instancia();
                  for (int i = 0; i <5; i++) {
                      datos[i] =rs.getObject(i+1);
-                     System.out.println(datos[i] ); 
+                     //System.out.println(datos[i] ); 
                      switch(i)
                      {
                          case 0: c.setN((int)datos[i]);break;
@@ -71,23 +66,19 @@ and promediofinal>=26
                      }
                  }  
                instancia.add(c);                 
-                  modeloTabla.addRow(datos);
+                modeloTabla.addRow(datos);
              } 
              rs.close();
             
         } catch (SQLException ex) {
             Logger.getLogger(ConsultaInstancia.class.getName()).log(Level.SEVERE, null, ex);
         }
-         System.out.println("fsdf"+(modeloTabla.getRowCount()-1));
-             if((modeloTabla.getRowCount())<=0)
-                 JOptionPane.showMessageDialog(null, "lo que busco\n"
-                    + "no se encuentra",   "en base",
-                    JOptionPane.INFORMATION_MESSAGE);
-             
-             else{
-             JOptionPane.showMessageDialog(null, "Usted\n"
-                    + "Ha ingresado satisfactoriamente al sistema",   "de instancias",
-                    JOptionPane.INFORMATION_MESSAGE);
+         //System.out.println("fsdf"+(modeloTabla.getRowCount()-1));
+             if(instancia.size()<=0)
+             { 
+                 ControlInstancia.existe=false;
+             }
+             else{ ControlInstancia.existe=true;
                      }
         //this.revalidate();
         return instancia;

@@ -150,9 +150,11 @@ public class EmpleadoDao {
             while(rs.next()){
                 c=new Empleado();
                 c.setCi(rs.getString("ciempleado"));
-                System.out.println(c.getCi());
+                
                 c.setNombre(rs.getString("nombre"));
-                c.setNombre(rs.getString("apellido"));
+                c.setApellido(rs.getString("apellido"));
+                 System.out.println(c.getApellido());
+                empleados.add(c);
             }            
         }catch (SQLException e) {
              System.out.println(e.getMessage());

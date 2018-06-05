@@ -81,7 +81,7 @@ public class ControlInterfaz implements ActionListener {
             case "Salir ventana vacacion":salirVentantaVacacion();break;
             case "Solicita comida":solicitaComida();break;
             case "Cancela comida":cancelaComida();break;
-             case "Acepta registro ingreso":aceptaIngresoAlmacen();break;
+            case "Acepta registro ingreso":aceptaIngresoAlmacen();break;
             case "Cancela registro ingreso almacen":cancelaIngresoAlmacen();break;
             case "Acepta registro salida":aceptaSalidaAlmacen();break;
             case "Cancela registro salida almacen":cancelaSalidaAlmacen();break;
@@ -122,7 +122,7 @@ public class ControlInterfaz implements ActionListener {
         System.out.println(ci+" "+mat+" "+cant);
         MaterialDao m=new MaterialDao();
         m.salidaMaterial(ci, mat, cant);   
-        ingresoAlmacen.cerrar();
+        salidaAlmacen.cerrar();
     }
 
     private void cancelaSalidaAlmacen() {
@@ -371,7 +371,7 @@ public class ControlInterfaz implements ActionListener {
         a=m.getListaMateriales();
         ProveedorDao p= new ProveedorDao();
         ArrayList b= new ArrayList <String> ();
-        b=p.getListaMateriales();
+        b=p.getListaProveedores();
         
         ingresoAlmacen=new IngresoAlmacen(b,a);
         ingresoAlmacen.setControlador(this);

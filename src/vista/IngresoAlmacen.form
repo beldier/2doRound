@@ -38,14 +38,14 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="proveedor" min="-2" max="-2" attributes="0"/>
-                  <Component id="cancelarIngreso" min="-2" max="-2" attributes="0"/>
-                  <Component id="producto" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCantidad" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="proveedor" alignment="1" pref="107" max="32767" attributes="0"/>
+                  <Component id="cancelarIngreso" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCantidad" alignment="0" max="32767" attributes="0"/>
+                  <Component id="producto" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="59" max="32767" attributes="0"/>
+              <EmptySpace pref="64" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -139,9 +139,9 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jCantidad">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCantidadActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

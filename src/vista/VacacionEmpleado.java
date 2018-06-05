@@ -75,8 +75,8 @@ public class VacacionEmpleado extends javax.swing.JFrame implements InterfazVist
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
                         .addComponent(jOtorgar)
-                        .addGap(26, 26, 26)
-                        .addComponent(jSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -128,6 +128,7 @@ public class VacacionEmpleado extends javax.swing.JFrame implements InterfazVist
         jSalir.setActionCommand(SALIRVENTANAVACACION);
         setVisible(true);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
     public int getCi()
     {

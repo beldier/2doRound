@@ -37,11 +37,7 @@ public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVist
         jRegistroComedor = new javax.swing.JButton();
         jHabilitadosInstancia = new javax.swing.JButton();
         jRegistroPersonal = new javax.swing.JButton();
-        jCronogramaMantenimiento = new javax.swing.JButton();
         jRegistroVacacion = new javax.swing.JButton();
-        jComputadorasMantenimiento = new javax.swing.JButton();
-        jProductosSinUsar = new javax.swing.JButton();
-        jUbicacionCustodiaBienes = new javax.swing.JButton();
         jMaterialesConsumibles = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,15 +67,7 @@ public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVist
             }
         });
 
-        jCronogramaMantenimiento.setText("Cronograma Mantenimiento");
-
         jRegistroVacacion.setText("Registro Vacacion");
-
-        jComputadorasMantenimiento.setText("Computadoras Mantenimieto");
-
-        jProductosSinUsar.setText("Productos sin usar");
-
-        jUbicacionCustodiaBienes.setText("Ubicacion Custodia Bienes");
 
         jMaterialesConsumibles.setText("Materiales Consumibles");
 
@@ -88,53 +76,40 @@ public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVist
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jRegistroPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jHabilitadosInstancia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jRegistroComedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCronogramaMantenimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jHabilitadosInstancia, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jUbicacionCustodiaBienes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jMaterialesConsumibles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jProductosSinUsar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComputadorasMantenimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jRegistroVacacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                    .addComponent(jRegistroVacacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jRegistroComedor, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
+                .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jUbicacionCustodiaBienes)
+                        .addComponent(jRegistroComedor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jMaterialesConsumibles)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jProductosSinUsar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComputadorasMantenimiento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jRegistroVacacion)
                         .addGap(36, 36, 36))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jIngreso)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSalida)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jRegistroPersonal)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jHabilitadosInstancia)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRegistroComedor)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCronogramaMantenimiento)))
-                .addGap(35, 35, 35))
+                        .addComponent(jHabilitadosInstancia)))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         pack();
@@ -154,31 +129,27 @@ public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVist
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jComputadorasMantenimiento;
-    private javax.swing.JButton jCronogramaMantenimiento;
     private javax.swing.JButton jHabilitadosInstancia;
     private javax.swing.JButton jIngreso;
     private javax.swing.JButton jMaterialesConsumibles;
-    private javax.swing.JButton jProductosSinUsar;
     private javax.swing.JButton jRegistroComedor;
     private javax.swing.JButton jRegistroPersonal;
     private javax.swing.JButton jRegistroVacacion;
     private javax.swing.JButton jSalida;
-    private javax.swing.JButton jUbicacionCustodiaBienes;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void setControlador(ControlInterfaz c) {
         jSalida.addActionListener(c);
-        jComputadorasMantenimiento.addActionListener(c);
+        //jComputadorasMantenimiento.addActionListener(c);
         jIngreso.addActionListener(c);
         jHabilitadosInstancia.addActionListener(c);
         jMaterialesConsumibles.addActionListener(c);
-        jProductosSinUsar.addActionListener(c);
+        //jProductosSinUsar.addActionListener(c);
         jRegistroComedor.addActionListener(c);
         jRegistroVacacion.addActionListener(c);
-        jCronogramaMantenimiento.addActionListener(c);
-        jUbicacionCustodiaBienes.addActionListener(c);
+        //jCronogramaMantenimiento.addActionListener(c);
+        //jUbicacionCustodiaBienes.addActionListener(c);
         jRegistroPersonal.addActionListener(c);
     }
 
@@ -188,15 +159,15 @@ public class SeleccionFuncion extends javax.swing.JFrame implements InterfazVist
         initComponents();
         
         jSalida.setActionCommand(ABRIREGISTROSALIDA);
-        jComputadorasMantenimiento.setActionCommand(ABRIRCOMPUTADORASMANTENIMIENTO);
+        //jComputadorasMantenimiento.setActionCommand(ABRIRCOMPUTADORASMANTENIMIENTO);
         jIngreso.setActionCommand(ABRIREGISTROINGRESO);
         jHabilitadosInstancia.setActionCommand(ABRIRHABILITADOSISTANCIA);
         jMaterialesConsumibles.setActionCommand(ABRIRMATERIALESCONSUMIBLES);
-        jProductosSinUsar.setActionCommand(ABRIRPRODUCTOSSINUSAR);
+        //jProductosSinUsar.setActionCommand(ABRIRPRODUCTOSSINUSAR);
         jRegistroComedor.setActionCommand(ABRIREGISTROCOMEDOR);
         jRegistroVacacion.setActionCommand(ABRIREGISTROVACACION);
-        jCronogramaMantenimiento.setActionCommand(ABRIRCRONOGRAMAMANTENIMIENTO);
-        jUbicacionCustodiaBienes.setActionCommand(ABRIRUBICACIONCUSTODIABIENES);
+        //jCronogramaMantenimiento.setActionCommand(ABRIRCRONOGRAMAMANTENIMIENTO);
+        //jUbicacionCustodiaBienes.setActionCommand(ABRIRUBICACIONCUSTODIABIENES);
         jRegistroPersonal.setActionCommand(ABRIREGISTROPERSONAL);
         
         setVisible(true);

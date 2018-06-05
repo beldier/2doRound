@@ -130,7 +130,7 @@ public class ConsultaInstancia extends javax.swing.JFrame implements InterfazVis
         InstanciaDao inst=new InstanciaDao();
         limpiarTabla();       
        if (!materia.getText().isEmpty()&& !docente.getText().isEmpty()){
-       inst.setFilas(materia.getText(),docente.getText());       
+       InstanciaDao.setFilas(materia.getText(),docente.getText());       
        }else{           
            JOptionPane.showMessageDialog(null, "Acceso denegado:\n"
                     + "Por favor ingrese un docente y/o materia correctos", "Acceso denegado",
@@ -176,8 +176,9 @@ public class ConsultaInstancia extends javax.swing.JFrame implements InterfazVis
     public void init() {
         initComponents();
         setVisible(true);
-        setLocationRelativeTo(ok);
+        setLocationRelativeTo(null);
         ok.setActionCommand(ABRIRHABILITADOSISTANCIA);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        
     }
 }

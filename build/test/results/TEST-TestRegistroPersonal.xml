@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="faith" name="TestRegistroPersonal" skipped="0" tests="2" time="0.454" timestamp="2018-05-31T18:39:24">
+<testsuite errors="0" failures="0" hostname="faith" name="TestRegistroPersonal" skipped="0" tests="2" time="0.46" timestamp="2018-06-05T00:58:51">
   <properties>
     <property name="netbeans.autoupdate.country" value="US" />
-    <property name="javac.test.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/a/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
+    <property name="javac.test.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
     <property name="javac.includes" value="TestRegistroPersonal.java" />
     <property name="ant.core.lib" value="/home/lurianne/netbeans-8.2/extide/ant/lib/ant.jar" />
     <property name="javadoc.windowtitle" value="" />
-    <property name="user.dir" value="/home/lurianne/Documents/sis2/a/2doRound" />
+    <property name="user.dir" value="/home/lurianne/Documents/sis2/Fail/2doRound" />
     <property name="java.vm.version" value="25.171-b11" />
     <property name="libs.MySQLDriver.classpath" value="/home/lurianne/netbeans-8.2/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar" />
     <property name="libs.eclipselinkmodelgen.src" value="" />
@@ -26,7 +26,7 @@
     <property name="have.tests" value="true" />
     <property name="addExports:java.desktop/com.sun.java.swing.plaf.gtk" value="ALL-UNNAMED" />
     <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
-    <property name="libs.hamcrest.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
+    <property name="libs.hamcrest.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
     <property name="libs.javac-api.javadoc" value="" />
     <property name="os.name" value="Linux" />
     <property name="test.class" value="TestRegistroPersonal" />
@@ -42,7 +42,7 @@
     <property name="user.name" value="lurianne" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner TestRegistroPersonal skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/lurianne/Documents/sis2/a/2doRound/build/test/results/TEST-TestRegistroPersonal.xml crashfile=/home/lurianne/Documents/sis2/a/2doRound/build/junitvmwatcher5318204641564554530.properties propsfile=/home/lurianne/Documents/sis2/a/2doRound/build/junit6069346718816584851.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner TestRegistroPersonal skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/lurianne/Documents/sis2/Fail/2doRound/build/test/results/TEST-TestRegistroPersonal.xml crashfile=/home/lurianne/Documents/sis2/Fail/2doRound/build/junitvmwatcher7283638665576843368.properties propsfile=/home/lurianne/Documents/sis2/Fail/2doRound/build/junit3071565785194495218.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="ant.file.type.Test" value="file" />
@@ -56,7 +56,7 @@
     <property name="manifest.file" value="manifest.mf" />
     <property name="addExports:java.desktop/sun.awt" value="ALL-UNNAMED" />
     <property name="javadoc.encoding" value="UTF-8" />
-    <property name="javac.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar" />
+    <property name="javac.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar" />
     <property name="libs.spring-framework400.classpath" value="/home/lurianne/netbeans-8.2/ide/modules/org-apache-commons-logging.jar:/home/lurianne/netbeans-8.2/java/modules/ext/cglib-2.2.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-aop-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-aspects-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-beans-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-build-src-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-context-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-context-support-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-core-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-expression-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-framework-bom-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-instrument-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-instrument-tomcat-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-jdbc-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-jms-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-messaging-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-orm-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-oxm-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-test-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-tx-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-web-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-webmvc-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-webmvc-portlet-4.0.1.RELEASE.jar:/home/lurianne/netbeans-8.2/java/modules/ext/spring-4/spring-websocket-4.0.1.RELEASE.jar" />
     <property name="debug-transport" value="dt_socket" />
     <property name="netbeans.home" value="/home/lurianne/netbeans-8.2/platform" />
@@ -78,10 +78,10 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="/" />
-    <property name="javac.includesfile.binary" value="/home/lurianne/Documents/sis2/a/2doRound/null1516355601" />
+    <property name="javac.includesfile.binary" value="/home/lurianne/Documents/sis2/Fail/2doRound/null969759978" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
-    <property name="javac.test.processorpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/a/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
+    <property name="javac.test.processorpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar" />
     <property name="netbeans.buildnumber" value="201609300101" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="javax.accessibility.assistive_technologies" value="org.GNOME.Accessibility.AtkWrapper" />
@@ -90,9 +90,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="/home/lurianne/netbeans-8.2/ide/docs/jaxb-api-doc.zip" />
-    <property name="javac.includes.binary" value="/home/lurianne/Documents/sis2/a/2doRound/build/test/classes/TestRegistroPersonal.class" />
+    <property name="javac.includes.binary" value="/home/lurianne/Documents/sis2/Fail/2doRound/build/test/classes/TestRegistroPersonal.class" />
     <property name="ant.home" value="/home/lurianne/netbeans-8.2/extide/ant" />
-    <property name="libs.junit_4.src" value="/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12-sources.jar" />
+    <property name="libs.junit_4.src" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12-sources.jar" />
     <property name="libs.testng.classpath" value="/home/lurianne/netbeans-8.2/platform/modules/ext/testng-6.8.1-dist.jar" />
     <property name="libs.absolutelayout.maven-pom" value="" />
     <property name="ant.java.version" value="1.8" />
@@ -102,7 +102,7 @@
     <property name="libs.spring-framework400.src" value="" />
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="basedir" value="/home/lurianne/Documents/sis2/a/2doRound" />
+    <property name="basedir" value="/home/lurianne/Documents/sis2/Fail/2doRound" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
     <property name="jar.compress" value="false" />
     <property name="path.separator" value=":" />
@@ -122,7 +122,7 @@
     <property name="test.binaryincludes" value="&lt;nothing&gt;" />
     <property name="manifest.available" value="true" />
     <property name="libs.spring-framework300.maven-pom" value="" />
-    <property name="run.test.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/a/2doRound/lib/hamcrest/hamcrest-core-1.3.jar:build/test/classes" />
+    <property name="run.test.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar:build/test/classes" />
     <property name="ant.project.invoked-targets" value="test-single" />
     <property name="test.binaryexcludes" value="" />
     <property name="libs.swing-layout.javadoc" value="/home/lurianne/netbeans-8.2/platform/docs/swing-layout-1.0.4-doc.zip" />
@@ -142,38 +142,39 @@
     <property name="libs.JAXB-ENDORSED.javadoc" value="" />
     <property name="libs.JWSAntTasks.classpath" value="/home/lurianne/netbeans-8.2/java/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar" />
     <property name="libs.spring-framework300.src" value="" />
-    <property name="empty.dir" value="/home/lurianne/Documents/sis2/a/2doRound/build/empty" />
+    <property name="empty.dir" value="/home/lurianne/Documents/sis2/Fail/2doRound/build/empty" />
     <property name="version-output" value="java version &quot;1.8" />
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
     <property name="javadoc.preview" value="true" />
     <property name="libs.jpa20-persistence.javadoc" value="/home/lurianne/netbeans-8.2/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre" />
-    <property name="debug.test.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/a/2doRound/lib/hamcrest/hamcrest-core-1.3.jar:build/test/classes" />
+    <property name="debug.test.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes:/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar:build/test/classes" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
     <property name="ant.project.default-target" value="default" />
     <property name="annotation.processing.run.all.processors" value="true" />
     <property name="libs.PostgreSQLDriver.javadoc" value="" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
-    <property name="libraries.dir.nativedirsep" value="/home/lurianne/Documents/sis2/a/2doRound/lib" />
+    <property name="libraries.dir.nativedirsep" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib" />
     <property name="libs.hibernate4-persistence.javadoc" value="/home/lurianne/netbeans-8.2/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="http.nonProxyHosts" value="localhost|127.0.0.1|faith" />
-    <property name="libs.junit_4.javadoc" value="/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12-javadoc.jar" />
-    <property name="run.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes" />
+    <property name="libs.junit_4.javadoc" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12-javadoc.jar" />
+    <property name="run.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes" />
     <property name="jna.boot.library.name" value="jnidispatch-422" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
     <property name="libs.jpa2-persistence.maven-pom" value="" />
     <property name="annotation.processing.enabled.in.editor" value="false" />
     <property name="libs.hibernate4-support.classpath" value="/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/antlr-2.7.7.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/c3p0-0.9.2.1.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/hibernate-c3p0-4.3.1.Final.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/mchange-commons-java-0.2.3.4.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/dom4j-1.6.1.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/ehcache-core-2.4.3.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/hibernate-ehcache-4.3.1.Final.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/hibernate-core-4.3.1.Final.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/jboss-logging-3.1.3.GA.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/hibernate-commons-annotations-4.0.4.Final.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/hibernate-entitymanager-4.3.1.Final.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/javassist-3.18.1-GA.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/slf4j-api-1.6.1.jar:/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/slf4j-simple-1.6.1.jar" />
     <property name="nb.native.filechooser" value="false" />
+    <property name="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar" value="" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
     <property name="javac.deprecation" value="false" />
     <property name="javadoc.use" value="true" />
     <property name="sun.java2d.noddraw" value="true" />
-    <property name="javac.processorpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar" />
+    <property name="javac.processorpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar" />
     <property name="libs.hamcrest.maven-pom" value="" />
     <property name="javac.compilerargs" value="" />
-    <property name="ant.file" value="/home/lurianne/Documents/sis2/a/2doRound/build.xml" />
+    <property name="ant.file" value="/home/lurianne/Documents/sis2/Fail/2doRound/build.xml" />
     <property name="libs.beans-binding.maven-pom" value="" />
     <property name="libs.hibernate4-support.javadoc" value="/home/lurianne/netbeans-8.2/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="libs.beans-binding.src" value="" />
@@ -192,12 +193,11 @@
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64" />
     <property name="have.sources" value="true" />
     <property name="libs.hamcrest.javadoc" value="" />
-    <property name="debug.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes" />
+    <property name="debug.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar:lib/jcalendar-1.4.jar:build/classes" />
     <property name="javac.external.vm" value="true" />
     <property name="javadoc.private" value="false" />
     <property name="test.src.dir" value="test" />
-    <property name="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar" value="" />
-    <property name="ant.file.Test-impl" value="/home/lurianne/Documents/sis2/a/2doRound/nbproject/build-impl.xml" />
+    <property name="ant.file.Test-impl" value="/home/lurianne/Documents/sis2/Fail/2doRound/nbproject/build-impl.xml" />
     <property name="ap.processors.internal" value="" />
     <property name="meta.inf.dir" value="src/META-INF" />
     <property name="javadoc.encoding.used" value="UTF-8" />
@@ -222,7 +222,7 @@
     <property name="libs.absolutelayout.javadoc" value="" />
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="libs.CopyLibs.prop-version" value="2.0" />
-    <property name="libraries.dir" value="/home/lurianne/Documents/sis2/a/2doRound/lib" />
+    <property name="libraries.dir" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib" />
     <property name="do.archive+main.class.available" value="true" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="libs.javac-api.classpath" value="/home/lurianne/netbeans-8.2/java/modules/ext/nb-javac-api.jar" />
@@ -240,7 +240,7 @@
     <property name="annotation.processing.processor.options" value="" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="libs.jaxb.src" value="" />
-    <property name="work.dir" value="/home/lurianne/Documents/sis2/a/2doRound" />
+    <property name="work.dir" value="/home/lurianne/Documents/sis2/Fail/2doRound" />
     <property name="libs.jaxb.classpath" value="/home/lurianne/netbeans-8.2/ide/modules/ext/jaxb/jaxb-impl.jar:/home/lurianne/netbeans-8.2/ide/modules/ext/jaxb/jaxb-xjc.jar:/home/lurianne/netbeans-8.2/ide/modules/ext/jaxb/jaxb1-impl.jar:/home/lurianne/netbeans-8.2/ide/modules/ext/jaxb/activation.jar:/home/lurianne/netbeans-8.2/ide/modules/ext/jaxb/api/jaxb-api.jar:/home/lurianne/netbeans-8.2/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
@@ -251,18 +251,18 @@
     <property name="java.specification.version" value="1.8" />
     <property name="libs.jaxws21.maven-pom" value="" />
     <property name="java.vm.info" value="mixed mode" />
-    <property name="libraries.path" value="/home/lurianne/Documents/sis2/a/2doRound/lib/nblibraries.properties" />
+    <property name="libraries.path" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/nblibraries.properties" />
     <property name="nb.junit.batch" value="true" />
     <property name="junit.forkmode" value="perTest" />
     <property name="addExports:java.management/sun.management" value="ALL-UNNAMED" />
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes" />
     <property name="javac.target" value="1.8" />
-    <property name="built-jar.properties" value="/home/lurianne/Documents/sis2/a/2doRound/build/built-jar.properties" />
+    <property name="built-jar.properties" value="/home/lurianne/Documents/sis2/Fail/2doRound/build/built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
     <property name="annotation.processing.enabled" value="true" />
     <property name="libs.jpa2-persistence.src" value="" />
-    <property name="ant.file.Test" value="/home/lurianne/Documents/sis2/a/2doRound/build.xml" />
+    <property name="ant.file.Test" value="/home/lurianne/Documents/sis2/Fail/2doRound/build.xml" />
     <property name="libs.jpa20-persistence.src" value="" />
     <property name="ant.file.type.Test-impl" value="file" />
     <property name="dist.dir" value="dist" />
@@ -278,7 +278,7 @@
     <property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/lib64:/usr/lib:/lib:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu/sse2:/usr/lib/x86_64-linux-gnu/libfakeroot" />
     <property name="default.javac.target" value="1.8" />
     <property name="libs.hamcrest.prop-maven-dependencies" value="org.hamcrest:hamcrest-core:1.3:jar" />
-    <property name="libs.junit_4.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12.jar" />
+    <property name="libs.junit_4.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar" />
     <property name="user.timezone" value="" />
     <property name="nb.junit.single" value="false" />
     <property name="libs.junit_4.displayName" value="JUnit 4.12" />
@@ -290,13 +290,12 @@
     <property name="libs.jpa2-persistence.javadoc" value="/home/lurianne/netbeans-8.2/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="libs.PostgreSQLDriver.prop-maven-dependencies" value="org.postgresql:postgresql:9.4.1209:jar" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
-    <property name="java.class.path" value="/home/lurianne/Documents/sis2/a/2doRound/postgresql-42.2.2.jar:/home/lurianne/Documents/sis2/a/2doRound/lib/jcalendar-1.4.jar:/home/lurianne/Documents/sis2/a/2doRound/build/classes:/home/lurianne/Documents/sis2/a/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/a/2doRound/lib/hamcrest/hamcrest-core-1.3.jar:/home/lurianne/Documents/sis2/a/2doRound/build/test/classes:/home/lurianne/netbeans-8.2/extide/ant/lib/ant-launcher.jar:/home/lurianne/netbeans-8.2/extide/ant/lib/ant.jar:/home/lurianne/netbeans-8.2/extide/ant/lib/ant-junit.jar:/home/lurianne/netbeans-8.2/extide/ant/lib/ant-junit4.jar" />
+    <property name="java.class.path" value="/home/lurianne/Documents/sis2/Fail/2doRound/postgresql-42.2.2.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/jcalendar-1.4.jar:/home/lurianne/Documents/sis2/Fail/2doRound/build/classes:/home/lurianne/Documents/sis2/Fail/2doRound/lib/junit_4/junit-4.12.jar:/home/lurianne/Documents/sis2/Fail/2doRound/lib/hamcrest/hamcrest-core-1.3.jar:/home/lurianne/Documents/sis2/Fail/2doRound/build/test/classes:/home/lurianne/netbeans-8.2/extide/ant/lib/ant-launcher.jar:/home/lurianne/netbeans-8.2/extide/ant/lib/ant.jar:/home/lurianne/netbeans-8.2/extide/ant/lib/ant-junit.jar:/home/lurianne/netbeans-8.2/extide/ant/lib/ant-junit4.jar" />
     <property name="addExports:java.desktop/java.awt.peer" value="ALL-UNNAMED" />
     <property name="addExports:java.desktop/com.sun.beans.editors" value="ALL-UNNAMED" />
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="/home/lurianne/netbeans-8.2/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar" />
-    <property name="/home/lurianne/Documents/sis2/a/2doRound/lib/PostgreSQLDriver/postgresql-42.2.2.jar" value="" />
     <property name="os.version" value="4.15.0-22-generic" />
     <property name="application.args" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
@@ -318,7 +317,7 @@
     <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="dist.archive.excludes" value="" />
     <property name="libs.testng.javadoc" value="/home/lurianne/netbeans-8.2/platform/docs/testng-6.8.1-javadoc.zip" />
-    <property name="libs.PostgreSQLDriver.classpath" value="/home/lurianne/Documents/sis2/a/2doRound/lib/../postgresql-42.2.2.jar" />
+    <property name="libs.PostgreSQLDriver.classpath" value="/home/lurianne/Documents/sis2/Fail/2doRound/lib/../postgresql-42.2.2.jar" />
     <property name="libs.hibernate4-persistencemodelgen.classpath" value="/home/lurianne/netbeans-8.2/java/modules/ext/hibernate4/hibernate-jpamodelgen-4.3.1.Final.jar" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
     <property name="main.class" value="main.main" />
@@ -332,10 +331,11 @@
     <property name="javadoc.nonavbar" value="false" />
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+    <property name="/home/lurianne/Documents/sis2/Fail/2doRound/lib/PostgreSQLDriver/postgresql-42.2.2.jar" value="" />
     <property name="" value="======" />
   </properties>
-  <testcase classname="TestRegistroPersonal" name="reportePersonalActivo" time="0.392" />
-  <testcase classname="TestRegistroPersonal" name="unSoloRegistro" time="0.005" />
+  <testcase classname="TestRegistroPersonal" name="reportePersonalActivo" time="0.394" />
+  <testcase classname="TestRegistroPersonal" name="unSoloRegistro" time="0.006" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
